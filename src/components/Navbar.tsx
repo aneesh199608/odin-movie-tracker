@@ -11,6 +11,7 @@ import { Input } from "./ui/input";
 import { ShoppingCart } from "lucide-react";
 import { Badge } from "./ui/badge";
 import { Menu as MenuIcon, X as XIcon } from "lucide-react";
+import { ModeToggle } from "./mode-toggle";
 
 
 export default function Navbar() {
@@ -19,7 +20,7 @@ export default function Navbar() {
     const [mobileOpen, setMobileOpen] = useState(false);
 
     return (
-        <header className="border-b bg-white h-24 relative px-16">
+        <header className="border-b bg-background h-24 relative px-16">
             <div className="container mx-auto flex items-center justify-between h-full relative">
 
                 <div className="font-bold text-2xl flex-shrink-0">
@@ -59,6 +60,7 @@ export default function Navbar() {
                                 </Badge>
                         )}
                     </Link>
+                    <ModeToggle />
 
                     {/* Hamburger Menu Button (visible on mobile) */}
                     <button
@@ -84,7 +86,7 @@ export default function Navbar() {
                 </nav>
                 </div>
             )}
-            
+
         </header>
     )
 }
