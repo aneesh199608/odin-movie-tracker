@@ -1,5 +1,7 @@
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
+import React from "react";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 interface HeroProps {
   heading?: string;
@@ -19,8 +21,17 @@ const Hero = ({
   }
 }: HeroProps) => {
   return (
-    <section className="py-32">
+    <section className="py-16">
+      <div className="flex justify-center items-center">
+      <DotLottieReact
+          src="https://lottie.host/fb1ceab5-83cc-40b5-aab2-92f2a0968e16/Zhf02EJUis.lottie"
+          loop
+          autoplay
+          style={{ width: 300, height: 300 }}
+        />
+      </div>
       <div className="container text-center">
+        
         <div className="mx-auto flex max-w-5xl flex-col gap-6">
           <h1 className="text-3xl font-extrabold lg:text-6xl">{heading}</h1>
           <p className="text-balance text-muted-foreground lg:text-lg">
