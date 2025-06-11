@@ -2,6 +2,7 @@
 import './App.css'
 import Navbar from './components/Navbar'
 import { ThemeProvider } from './components/theme-provider.tsx'; 
+import { Hero } from './components/Hero.tsx';
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
     <>
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <Navbar />
+      <Hero />
     </ThemeProvider>
       
     </>
