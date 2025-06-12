@@ -9,7 +9,7 @@ export default function ProductsList() {
                 image={hatImg}
                 title="Red Hat"
                 description="Clothing"
-                price={28}
+                price={"28,000"}
                 onAddToCart={() => console.log("Add to cart")}
             />
         </>

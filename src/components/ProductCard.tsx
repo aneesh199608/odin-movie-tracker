@@ -19,23 +19,25 @@ export function ProductCard({
     // addQuantity,
 }: ProductCardProps) {
     return (
-        <div className="bg-card rounded-2xl shadow p-6 w-full max-w-xs flex flex-col">
-            <img
-                src={image}
-                alt={title}
-                className="rounded-xl object-cover w-full aspect-square mb-4"
-            />
-            <div className="flex justify-between items-center mb-2">
-                <div>
-                    <h3 className="text-xl font-semibold">{title}</h3>
-                    <div className="text-muted-foreground text-base">{description}</div>
-                </div>
-                <span className="text-2xl font-bold">${price}</span>
+        <div className="bg-card rounded-lg border-1 p-4 w-[240px] flex flex-col gap-2">
+            <div className="bg-white w-full h-auto rounded-lg overflow-hidden">
+                <img
+                    src={image}
+                    alt={title}
+                    className="object-cover w-full h-auto"
+                />
             </div>
-            <div className="flex gap-2 mt-auto">
+            <div className="flex w-full justify-between items-start">
+                <div>
+                    <h3 className="text-base font-semibold">{title}</h3>
+                    <div className="text-muted-foreground text-sm text-start">{description}</div>
+                </div>
+                <span className="text-lg font-bold">₹{price}</span>
+            </div>
+            <div className="flex">
                 <Button
                     variant="outline"
-                    className="flex-1 border rounded-xl"
+                    className="w-full border rounded-sm"
                     onClick={onAddToCart}
                     >
                         <Plus className="mr-2" /> Add to Cart
