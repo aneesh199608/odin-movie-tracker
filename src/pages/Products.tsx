@@ -1,11 +1,20 @@
+import { AppSidebar } from "@/components/AppSidebar" 
 import ProductsList from "@/components/ProductsList"
 
 function Products() {
 
   return (
     <>
-      <h1> Product Listing goes here </h1>
-      <ProductsList />
+      <div className="container mx-auto py-8">
+        <div className="flex gap-8">
+            <div className="w-64 flex-shrink-0">
+                <AppSidebar />
+            </div>
+            <div className="flex-1">
+                <ProductsList />
+            </div>
+        </div>
+      </div>
     </>
   )
 }
