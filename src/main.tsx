@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import React from 'react'
 import "./index.css";
 import { ThemeProvider } from './components/theme-provider.tsx';
@@ -14,7 +14,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Routes>
           <Route path="/" element={<App />}>
             <Route index element={<Home />} />
-            <Route path="/products" element={<Products />} />
+            <Route path="/products" element={<Navigate to="/products/all" replace />} />
+            <Route path="/products/:category" element={<Products />} />
 
           </Route>
         </Routes>

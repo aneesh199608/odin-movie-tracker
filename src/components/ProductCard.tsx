@@ -8,6 +8,7 @@ interface ProductCardProps {
     price: number | string;
     onAddToCart?: () => void;
     addQuantity?: number;
+    category?: string;
 }
 
 export function ProductCard({
@@ -16,6 +17,7 @@ export function ProductCard({
     description,
     price,
     onAddToCart,
+    category,
     // addQuantity,
 }: ProductCardProps) {
     return (

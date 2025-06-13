@@ -1,4 +1,5 @@
 import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
+import { NavLink, useParams } from "react-router-dom";
  
 import {
   Sidebar,
@@ -14,34 +15,16 @@ import {
  
 // Menu items.
 const items = [
-  {
-    title: "All",
-    url: "/All",
-    icon: Home,
-  },
-  {
-    title: "Inbox",
-    url: "#",
-    icon: Inbox,
-  },
-  {
-    title: "Calendar",
-    url: "#",
-    icon: Calendar,
-  },
-  {
-    title: "Search",
-    url: "#",
-    icon: Search,
-  },
-  {
-    title: "Settings",
-    url: "#",
-    icon: Settings,
-  },
-]
+  { title: "All", url: "/products/all", icon: Home },
+  { title: "Clothes", url: "/products/clothes", icon: Inbox },
+  { title: "Posters", url: "/products/posters", icon: Calendar },
+  { title: "Electronics", url: "/products/electronics", icon: Search },
+  { title: "Footwear", url: "/products/footwear", icon: Settings },
+];
  
 export function AppSidebar() {
+  const { category } = useParams();
+
   return (
     <SidebarProvider>
       <Sidebar>
@@ -52,13 +35,20 @@ export function AppSidebar() {
               <SidebarMenu>
                 {items.map((item) => (
                   <SidebarMenuItem key={item.title}>
-                    <SidebarMenuButton asChild>
-                      <a href={item.url}>
-                        <item.icon />
-                        <span>{item.title}</span>
-                      </a>
-                    </SidebarMenuButton>
-                  </SidebarMenuItem>
+                  <SidebarMenuButton
+                    className={
+                      category === item.url.split("/").pop()
+                        ? "bg-muted text-foreground font-semibold"
+                        : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                    }
+                    asChild
+                  >
+                    <NavLink to={item.url}>
+                      <item.icon />
+                      <span>{item.title}</span>
+                    </NavLink>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>                
                 ))}
               </SidebarMenu>
             </SidebarGroupContent>

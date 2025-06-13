@@ -5,18 +5,23 @@ export interface Product {
     title: string;
     description: string;
     price: number | string;
-    onAddToCart?: () => void
+    onAddToCart?: () => void;
+    category?: string;
 }
 
 interface ProductsListProps {
-    products: Product[]
+    products: Product[];
+    category?: string;
 }
 
 export default function ProductsList(
-    {products}: ProductsListProps) {
+    {products, category}: ProductsListProps) {
+        const filtered = category 
+            ? products.filter((p) => p.category === category)
+            : products;
         return (
             <div className="flex flex-wrap justify-start gap-4">
-                {products.map((product, idx) => (
+                {filtered.map((product, idx) => (
                     <ProductCard
                         key={idx}
                         image={product.image}
@@ -24,6 +29,7 @@ export default function ProductsList(
                         description={product.description}
                         price={product.price}
                         onAddToCart={product.onAddToCart}
+                        category={product.category}
                     />
                 ))}
             </div>

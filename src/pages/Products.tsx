@@ -1,8 +1,11 @@
 import { AppSidebar } from "@/components/AppSidebar" 
 import ProductsList from "@/components/ProductsList"
 import { defaultProducts } from "@/data/products-data"
+import { useParams } from "react-router-dom"
 
 function Products() {
+    const {category} = useParams();
+    const selectedCategory = category === "all" || !category ? undefined : category;
 
   return (
     <>
@@ -12,7 +15,7 @@ function Products() {
                 <AppSidebar />
             </div>
             <div className="flex-1">
-                <ProductsList products={defaultProducts} />
+                <ProductsList products={defaultProducts} category={selectedCategory} />
             </div>
         </div>
       </div>
