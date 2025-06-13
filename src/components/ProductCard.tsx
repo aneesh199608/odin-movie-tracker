@@ -27,10 +27,10 @@ export function ProductCard({
                     className="object-cover w-full h-auto"
                 />
             </div>
-            <div className="flex w-full justify-between items-start">
+            <div className="flex w-full justify-between items-start text-start">
                 <div>
                     <h3 className="text-base font-semibold">{title}</h3>
-                    <div className="text-muted-foreground text-sm text-start">{description}</div>
+                    <div className="text-muted-foreground text-sm">{description}</div>
                 </div>
                 <span className="text-lg font-bold">₹{price}</span>
             </div>

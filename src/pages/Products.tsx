@@ -1,5 +1,6 @@
 import { AppSidebar } from "@/components/AppSidebar" 
 import ProductsList from "@/components/ProductsList"
+import { defaultProducts } from "@/data/products-data"
 
 function Products() {
 
@@ -11,7 +12,7 @@ function Products() {
                 <AppSidebar />
             </div>
             <div className="flex-1">
-                <ProductsList />
+                <ProductsList products={defaultProducts} />
             </div>
         </div>
       </div>
