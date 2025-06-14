@@ -5,7 +5,7 @@ import React from 'react'
 import "./index.css";
 import { ThemeProvider } from './components/theme-provider.tsx';
 import Home from './pages/Home.tsx';
-import Products from './pages/Products.tsx';
+import Movies from './pages/Movies.tsx';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -14,8 +14,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Routes>
           <Route path="/" element={<App />}>
             <Route index element={<Home />} />
-            <Route path="/products" element={<Navigate to="/products/all" replace />} />
-            <Route path="/products/:category" element={<Products />} />
+            <Route path="/movies" element={<Navigate to="/movies/all" replace />} />
+            <Route path="/movies/:category" element={<Movies />} />
 
           </Route>
         </Routes>

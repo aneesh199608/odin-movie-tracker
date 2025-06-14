@@ -13,18 +13,18 @@ interface HeroProps {
 }
 
 const Hero = ({
-  heading = "Shop Smarter, Live Better! Your Cartly Journey Begins Here",
-  description = "Discover the best deals on everyday essentials, all in one seamless shopping experience designed just for you.",
+  heading = "Stop swiping. Start watching!",
+  description = "Watch Movies That Deserve Your Attention. A handpicked library of timeless films curated for minds that crave depth.",
   button = {
-    text: "Explore Our Products",
-    url: "/products"
+    text: "I'm ready to stop scrolling",
+    url: "/movies"
   }
 }: HeroProps) => {
   return (
     <section className="py-16">
       <div className="flex justify-center items-center">
       <DotLottieReact
-          src="https://lottie.host/fb1ceab5-83cc-40b5-aab2-92f2a0968e16/Zhf02EJUis.lottie"
+          src="https://lottie.host/22d0205e-a9cb-4daf-a041-3ac42fc639f7/CwGxKdurdM.lottie"
           loop
           autoplay
           style={{ width: 300, height: 300 }}

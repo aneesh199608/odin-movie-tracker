@@ -12,7 +12,7 @@ import { ShoppingCart } from "lucide-react";
 import { Badge } from "./ui/badge";
 import { Menu as MenuIcon, X as XIcon } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
-import logoPng from "../assets/shopcart-logo.png"
+import logoPng from "../assets/OdinFlix Logo.png"
 
 export interface MenuItem {
     title: string;
@@ -35,13 +35,13 @@ export interface NavbarProps {
 
 const defaultMenu: MenuItem[] = [
     { title: "Home", url: "/" },
-    { title: "Products", url: "/products" },
+    { title: "Movies", url: "/movies" },
     // Add more items
   ];
 
   const defaultLogo = {
     url: "/",
-    title: "ShopCart",
+    title: "OdinFlix",
     alt: "Product Logo",
     src: logoPng,
   };
