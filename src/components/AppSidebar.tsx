@@ -14,12 +14,12 @@ import {
 } from "../components/ui/sidebar"
  
 // Menu items.
-const items = [
+export const items = [
   { title: "All", url: "/movies/all", icon: Home },
-  { title: "Clothes", url: "/movies/clothes", icon: Inbox },
-  { title: "Posters", url: "/movies/posters", icon: Calendar },
-  { title: "Electronics", url: "/movies/electronics", icon: Search },
-  { title: "Footwear", url: "/movies/footwear", icon: Settings },
+  { title: "My Recommendations", url: "/movies/recommendations", icon: Inbox },
+  { title: "Ghibli Magic", url: "/movies/ghibli", icon: Calendar },
+  { title: "Strictly Indian", url: "/movies/indian", icon: Search },
+  { title: "Guilty Pleasure", url: "/movies/guiltypleasure", icon: Settings },
 ];
  
 export function AppSidebar() {

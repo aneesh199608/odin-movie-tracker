@@ -1,10 +1,11 @@
 import { MovieCard } from "./MovieCard";
+import { items } from "./AppSidebar"
 
 export interface Movies {
     image: string;
     title: string;
     description: string;
-    rating: number | string;
+    rating: number;
     onAddToWatch?: () => void;
     category?: string;
 }
@@ -16,6 +17,7 @@ interface MoviesListProps {
 
 export default function MoviesList(
     {movies, category}: MoviesListProps) {
+        const displayTitle = items.find(item => item.url.split("/").pop() === (category ?? "all"))?.title ?? "All";
         const filtered = category 
             ? movies.filter((m) => m.category === category)
             : movies;
@@ -24,7 +26,7 @@ export default function MoviesList(
         return (
             <div className="flex flex-col gap-4">
                 <div className="flex items-center gap-3">
-                    <h2 className="text-2xl font-bold capitalize">{category ?? "All"}</h2>
+                    <h2 className="text-2xl font-bold capitalize">{displayTitle}</h2>
                     <span className="bg-muted text-sm px-3 py-1 rounded-full text-muted-foreground">
                         {itemCount} {itemLabel}
                     </span>

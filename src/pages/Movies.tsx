@@ -1,6 +1,6 @@
 import { AppSidebar } from "@/components/AppSidebar" 
 import MoviesList from "@/components/MoviesList"
-import { defaultMovies } from "@/data/products-data"
+import { defaultMovies } from "@/data/movies-data"
 import { useParams } from "react-router-dom"
 
 function Movies() {
