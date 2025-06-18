@@ -14,8 +14,10 @@ export const defaultMovies: Movies[] = [
         category: "recommendations",
         onAddToWatch: () => console.log(`Added A Hero`),
         director: "Asghar Farhadi",
-        runtime: "2 hrs 20 mins",
+        runtime: "140",
         cast: ["Amir Jadidi"],
+        moreDescription: "Rahim is in prison because of a debt he was unable to repay. During a two-day leave, he tries to convince his creditor to withdraw his complaint against the payment of part of the sum. But things don't go as planned.",
+        year: 2021,
       },
       {
         image: spiritedAway,

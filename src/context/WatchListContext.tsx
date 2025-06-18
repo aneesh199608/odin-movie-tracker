@@ -35,13 +35,13 @@ export function WatchListProvider({children}: {children: ReactNode}) {
 
     // Load from localStorage on mount
     useEffect(() => {
-    const data = localStorage.getItem("watchlist");
+    const data = localStorage.getItem("watchList");
     if (data) setWatchList(JSON.parse(data));
     }, []);
 
     // Save to localStorage on change
     useEffect(() => {
-    localStorage.setItem("watchlist", JSON.stringify(watchList));
+    localStorage.setItem("watchList", JSON.stringify(watchList));
     }, [watchList]);
 
 
