@@ -6,9 +6,9 @@ export interface Movies {
     onAddToWatch?: () => void;
     category?: string;
 
-    director: string;
-    runtime: string;
-    moreDescription: string;
-    cast: string[];
-    year: number;
+    director?: string;
+    runtime?: string;
+    moreDescription?: string;
+    cast?: string[];
+    year?: number;
 }

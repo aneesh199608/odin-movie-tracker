@@ -34,6 +34,9 @@ export const defaultMovies: Movies[] = [
         rating: 4,
         category: "indian",
         onAddToWatch: () => console.log("Added Poster"),
+        moreDescription: "At a railway station in rural India, Gautam picks up his brother Raman for a lavish wedding. But their plans are derailed when they encounter Jhumpa, a desperate mother searching for her kidnapped baby. Together, they set off on a perilous journey to find the child, testing their beliefs, resilience, and humanity. In the wee morning hours at a remote railway station, a chance encounter changes the lives of a few young people forever. Gautam is there to pick up his brother Raman for an extravagant destination wedding. The relationship between the two brothers is already tenuous at best, and the thin veneer of familial love is further challenged when they chance upon Jhumpa Mahato. An already broken woman with little to her name, Jhumpa is beside herself with panic when she wakes from her slumber to discover her infant daughter missing.",
+        director: "Karan Tejpal",
+        runtime: "92",
       },
       {
         image: gameNight,

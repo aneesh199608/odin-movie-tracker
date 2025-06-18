@@ -17,7 +17,15 @@ export function useWatchList() {
 }
 
 export function WatchListProvider({children}: {children: ReactNode}) {
-    const [watchList, setWatchList] = useState<Movies[]>([]);
+    const [watchList, setWatchList] = useState<Movies[]>(() => {
+    const data = localStorage.getItem("watchList");
+    try {
+        return data ? JSON.parse(data) : [];
+    } catch {
+        return [];
+    }
+    });
+
 
     const addToWatchList = (movie: Movies) => {
         setWatchList((prev) => 
