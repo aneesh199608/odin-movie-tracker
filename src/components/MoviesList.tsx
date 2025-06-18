@@ -1,14 +1,6 @@
 import { MovieCard } from "./MovieCard";
-import { items } from "./AppSidebar"
-
-export interface Movies {
-    image: string;
-    title: string;
-    description: string;
-    rating: number;
-    onAddToWatch?: () => void;
-    category?: string;
-}
+import { items } from "./AppSidebar";
+import { type Movies } from "@/types/movies";
 
 interface MoviesListProps {
     movies: Movies[];
@@ -36,16 +28,10 @@ export default function MoviesList(
                     {filtered.map((movies, idx) => (
                         <MovieCard
                             key={idx}
-                            image={movies.image}
-                            title={movies.title}
-                            description={movies.description}
-                            rating={movies.rating}
-                            onAddToWatch={movies.onAddToWatch}
-                            category={movies.category}
+                            {...movies}
                         />
                     ))}
                 </div>
             </div>
         )
     }
-

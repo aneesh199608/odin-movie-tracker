@@ -1,15 +1,6 @@
 import { Button } from "./ui/button";
 import { Plus, Star } from "lucide-react";
-
-interface MovieCardProps {
-    image: string;
-    title: string;
-    description: string;
-    rating: number;
-    onAddToWatch?: () => void;
-    addQuantity?: number;
-    category?: string;
-}
+import { type Movies } from "@/types/movies";
 
 export function MovieCard({
     image,
@@ -17,9 +8,7 @@ export function MovieCard({
     description,
     rating,
     onAddToWatch,
-    category,
-    // addQuantity,
-}: MovieCardProps) {
+}: Movies) {
     return (
         <div className="bg-card rounded-lg border-1 p-4 w-[200px] flex flex-col gap-2">
             <div className="bg-white w-full aspect-[2/3] rounded-lg overflow-hidden">
