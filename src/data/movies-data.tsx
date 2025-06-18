@@ -1,4 +1,4 @@
-import type { Movies } from "@/components/MoviesList";
+import type { Movies } from "@/types/movies"
 import aHero from "../assets/a-hero.jpg"
 import stolen from "../assets/stolen-movie-poster.jpg"
 import spiritedAway from "../assets/spirited-away.jpg"
@@ -13,6 +13,9 @@ export const defaultMovies: Movies[] = [
         rating: 3,
         category: "recommendations",
         onAddToWatch: () => console.log(`Added A Hero`),
+        director: "Asghar Farhadi",
+        runtime: "2 hrs 20 mins",
+        cast: ["Amir Jadidi"],
       },
       {
         image: spiritedAway,

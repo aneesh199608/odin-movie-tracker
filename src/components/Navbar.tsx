@@ -8,11 +8,12 @@ import {
 } from "./ui/navigation-menu";
 import { Separator } from "./ui/separator";
 import { Input } from "./ui/input";
-import { ShoppingCart } from "lucide-react";
+import { Clapperboard } from "lucide-react";
 import { Badge } from "./ui/badge";
 import { Menu as MenuIcon, X as XIcon } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
 import logoPng from "../assets/OdinFlix Logo.png"
+import { useWatchList } from "@/context/WatchListContext";
 
 export interface MenuItem {
     title: string;
@@ -30,7 +31,6 @@ export interface NavbarProps {
         title: string;
     };
     menu?: MenuItem[];
-    cartCount?: number;
 }
 
 const defaultMenu: MenuItem[] = [
@@ -50,10 +50,12 @@ const defaultMenu: MenuItem[] = [
   export default function Navbar({
     logo = defaultLogo,
     menu = defaultMenu,
-    cartCount = 2,
+    
   }: NavbarProps) {
 
     const [mobileOpen, setMobileOpen] = useState(false);
+    const { watchList } = useWatchList();
+    const moviesCount = watchList.length;
 
     return (
         <header className="border-b bg-background h-24 relative px-16">
@@ -88,11 +90,11 @@ const defaultMenu: MenuItem[] = [
                         orientation="vertical"
                         className="hidden md:flex mx-2 data-[orientation=vertical]:h-4"
                     />
-                    <Link to="/cart" className="relative">
-                        <ShoppingCart className="w-6 h-6" />
-                            {cartCount > 0 && (
+                    <Link to="/watchlist" className="relative">
+                        <Clapperboard className="w-6 h-6" />
+                            {moviesCount > 0 && (
                                 <Badge className="absolute -top-2 -right-2 rounded-full text-xs px-2 py-0.5">
-                                    {cartCount}
+                                    {moviesCount}
                                 </Badge>
                         )}
                     </Link>
