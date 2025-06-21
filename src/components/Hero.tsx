@@ -20,7 +20,7 @@ const Hero = ({
   }
 }: HeroProps) => {
   return (
-    <section className="py-16">
+    <section className="py-16 items-center">
       <div className="flex justify-center items-center">
       <DotLottieReact
           src="https://lottie.host/22d0205e-a9cb-4daf-a041-3ac42fc639f7/CwGxKdurdM.lottie"
@@ -29,7 +29,7 @@ const Hero = ({
           style={{ width: 300, height: 300 }}
         />
       </div>
-      <div className="container text-center">
+      <div className="container text-center items-center">
         
         <div className="mx-auto flex max-w-5xl flex-col gap-6">
           <h1 className="text-3xl font-extrabold lg:text-6xl">{heading}</h1>
