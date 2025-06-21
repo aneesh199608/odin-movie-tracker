@@ -1,54 +1,28 @@
-# React + TypeScript + Vite
+# The Odin Flix
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+To my fellow Odinites: This was a project where I could take one of my favourite UI libraries '[shadcn/ui](https://ui.shadcn.com/)' and make a frontend project.
 
-Currently, two official plugins are available:
+While I started making a shopping cart as suggested in [The Odin Project course](https://www.theodinproject.com/lessons/node-path-react-new-shopping-cart), I decided to pivot and build a similar, function-wise application: **The Odin Flix**. This is an app that works like Letterboxd or IMDB, but with a cleaner, more minimal UI. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Finally, an application where I could showcase some of my UI design skills, which is what I currently do for a living!
 
-## Expanding the ESLint configuration
+## Live Demo
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+[Odin Flix Live](https://your-app-link.com)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+![Odin Flix Screenshot](./src/assets/app-screenshot.png)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- React (Vite)
+- TypeScript
+- [shadcn/ui](https://ui.shadcn.com/) (Radix + Tailwind CSS)
+- React Router
+- LocalStorage for persistence
+- Custom Context API for watch list management
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Data Source
+
+- Some movie data is manually curated (for flexibility and design).
+- For the "Ghibli Magic" section, I’ve used the [Studio Ghibli API](https://ghibliapi.vercel.app/) so I could learn to integrate free APIs along with manual data.
+
