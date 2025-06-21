@@ -7,13 +7,14 @@ import {
     NavigationMenuLink 
 } from "./ui/navigation-menu";
 import { Separator } from "./ui/separator";
-import { Input } from "./ui/input";
+import { Tooltip, TooltipContent, TooltipTrigger, TooltipProvider } from "./ui/tooltip";
 import { Clapperboard } from "lucide-react";
 import { Badge } from "./ui/badge";
 import { Menu as MenuIcon, X as XIcon } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
 import logoPng from "../assets/OdinFlix Logo.png"
 import { useWatchList } from "@/context/WatchListContext";
+import { Button } from "./ui/button";
 
 export interface MenuItem {
     title: string;
@@ -84,7 +85,25 @@ const defaultMenu: MenuItem[] = [
 
                 <div className="flex items-center gap-4 flex-shrink-0">
                     <div className="hidden md:block">
-                        <Input placeholder="Search" className="w-48" />
+                        <TooltipProvider>
+                            <Tooltip>
+                                <TooltipTrigger asChild>
+                                <a
+                                    href="https://github.com/aneesh199608/odin-movie-tracker"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <Button variant="outline" className="cursor-pointer">View on Github</Button>
+                                </a>
+                                </TooltipTrigger>
+                                <TooltipContent side="bottom" align="center">
+                                <span>
+                                    On my plate currently - Mobile version!
+                                </span>
+                                </TooltipContent>
+                            </Tooltip>
+                        </TooltipProvider>
+
                     </div>
                     <Separator
                         orientation="vertical"
@@ -123,7 +142,7 @@ const defaultMenu: MenuItem[] = [
                         {item.title}
                         </Link>
                     ))}
-                    <Input placeholder="Search" className="w-4/5" />
+                    <Button>Check on Github</Button>
                 </nav>
                 </div>
             )}
