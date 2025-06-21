@@ -8,7 +8,7 @@ Finally, an application where I could showcase some of my UI design skills, whic
 
 ## Live Demo
 
-[Odin Flix Live](https://your-app-link.com)
+[Odin Flix Live](https://odin-movie-tracker.vercel.app/)
 
 ![Odin Flix Screenshot](./src/assets/app-screenshot.png)
 
